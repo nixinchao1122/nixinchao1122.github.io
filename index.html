@@ -1,0 +1,36 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>灵感画廊 · 首页</title><link rel="stylesheet" href="css/style.css"></head><body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="index.html"><span class="dot"></span>灵感画廊<span style="font-family:var(--body);font-weight:600;color:var(--muted);font-size:12px">· by 张山(学号后两位:17)</span></a>
+  <nav class="links"><a href="index.html">作品</a><a href="board.html">留言板</a><a href="index.html#filters">筛选</a></nav>
+  <button id="themeBtn" class="iconbtn" type="button">🌙 深色</button>
+  <button id="burger" class="burger" type="button" aria-label="菜单">☰</button>
+</div></header>
+
+<section class="hero wrap">
+  <span class="kicker"><i></i>网页设计欣赏 · 个人练习作品</span>
+  <h1>好设计，<br><span class="grad">先看再收藏。</span></h1>
+  <p class="sub">参考 Awwwards 的内容中心卡片瀑布流与极致信息层级：浏览瞬间即可通过 Design / Usability / Creativity / Content 四维评分判断质量，再用多维筛选精确定位灵感。</p>
+</section>
+<section id="filters" class="filters wrap">
+  <div class="fgroup" data-key="award">
+    <span class="flabel">奖项</span>
+    <button class="chip on" data-v="全部">全部</button><button class="chip" data-v="SOTD">SOTD</button>
+    <button class="chip" data-v="HM">HM</button><button class="chip" data-v="提名">提名</button>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="fgroup" data-key="cat">
+    <span class="flabel">类别</span>
+    <button class="chip on" data-v="全部">全部</button><button class="chip" data-v="交互">交互</button>
+    <button class="chip" data-v="视觉">视觉</button><button class="chip" data-v="品牌">品牌</button><button class="chip" data-v="三维">三维</button>
+  </div>
+  <div class="fgroup" data-key="tech">
+    <span class="flabel">技术栈</span>
+    <button class="chip on" data-v="全部">全部</button><button class="chip" data-v="WebGL">WebGL</button>
+    <button class="chip" data-v="GSAP">GSAP</button><button class="chip" data-v="CSS">CSS</button>
+  </div>
+</section>
+<main class="wrap"><div class="masonry" id="grid"></div></main>
+<footer><div class="wrap"><span>灵感画廊 · 课程作业练习（化名：张山，学号后两位 17）</span><span>色彩 / 字体 / 布局 / 人机交互 四项学习</span></div></footer>
+<script src="js/main.js"></script></body></html>

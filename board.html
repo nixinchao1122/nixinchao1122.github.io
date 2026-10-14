@@ -1,0 +1,31 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>留言板 · 灵感画廊（预留后端）</title><link rel="stylesheet" href="css/style.css"></head><body>
+
+<header class="nav"><div class="wrap">
+  <a class="logo" href="index.html"><span class="dot"></span>灵感画廊<span style="font-family:var(--body);font-weight:600;color:var(--muted);font-size:12px">· by 张山(学号后两位:17)</span></a>
+  <nav class="links"><a href="index.html">作品</a><a href="board.html">留言板</a><a href="index.html#filters">筛选</a></nav>
+  <button id="themeBtn" class="iconbtn" type="button">🌙 深色</button>
+  <button id="burger" class="burger" type="button" aria-label="菜单">☰</button>
+</div></header>
+
+<main class="board wrap">
+  <span class="kicker"><i></i>Guestbook · 预留功能</span>
+  <h1>留言板</h1>
+  <p class="sub">写下你对作品的看法。当前版本先将留言保存在浏览器本地（localStorage），代码中已预留后端 API 接入点。</p>
+  <div class="note">预留说明：提交逻辑位于 <b>js/main.js</b> 中标记 “POST /api/messages” 的位置；接入后端后把 localStorage 读写替换为 fetch 请求即可，前端校验与字数统计保持不变。</div>
+  <form class="form" id="msgForm" novalidate>
+    <label for="mname">昵称（化名即可，不涉及隐私）</label>
+    <input class="input" id="mname" maxlength="12" placeholder="例如：张山">
+    <label for="mtext">留言内容</label>
+    <textarea id="mtext" maxlength="200" placeholder="说说你最喜欢的作品与理由…"></textarea>
+    <div class="hint" id="charCount">0/200</div>
+    <div class="err" id="merr"></div>
+    <div class="row">
+      <button class="btn primary" type="submit">提交留言（本地预留）</button>
+      <button class="btn ghost" type="button" id="clearMsg">清空本地留言</button>
+    </div>
+  </form>
+  <div class="msgs" id="msgList"></div>
+</main>
+<footer><div class="wrap"><span>灵感画廊 · 留言板预留功能演示</span><span>表单校验 / 字数统计 / 即时反馈</span></div></footer>
+<script src="js/main.js"></script></body></html>
